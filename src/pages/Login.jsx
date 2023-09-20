@@ -1,43 +1,29 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import app from "../firebase";
 
 function Login() {
 	const auth = getAuth(app);
 
 	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState(second);
+	const [password, setPassword] = useState("");
+	const navigate = useNavigate();
 
-	const signUp = () => {
-		createUserWithEmailAndPassword(auth, email, password)
+	const signIn = () => {
+		signInWithEmailAndPassword(auth, email, password)
 			.then((userCredential) => {
 				// Signed in
 				const user = userCredential.user;
-				console.log(user);
-				alert("Successfully Created");
+				navigate("/gallery/");
 				// ...
 			})
 			.catch((error) => {
 				const errorCode = error.code;
 				// const errorMessage = error.message;
-				alert(errorCode);
-				// ..
+				navigate("/error/");
 			});
 	};
-
-	// const navigate = useNavigate();
-
-	// const submithandler = (e) => {
-	// 	e.preventDefault();
-	// 	const username = e.target.username.value;
-	// 	const password = e.target.password.value;
-	// 	if (username === "user@example.com" && password === "1Password") {
-	// 		navigate("/gallery/");
-	// 	} else {
-	// 		navigate("/galleryy/");
-	// 	}
-	// };
 
 	return (
 		<div className="form-div">
@@ -55,8 +41,7 @@ function Login() {
 					type="password"
 					onChange={(e) => setPassword(e.target.value)}
 				/>
-				<button onClick={signUp}></button>
-				<button>Submit</button>
+				<button onClick={signIn}>Submit</button>
 			</div>
 		</div>
 	);
