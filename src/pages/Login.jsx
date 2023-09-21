@@ -8,6 +8,7 @@ function Login() {
 
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+	const [iserror, setIserror] = useState(false);
 	const navigate = useNavigate();
 
 	const signIn = () => {
@@ -19,9 +20,10 @@ function Login() {
 				// ...
 			})
 			.catch((error) => {
-				const errorCode = error.code;
+				setIserror(true);
+				// const errorCode = error.code;
 				// const errorMessage = error.message;
-				navigate("/error/");
+				console.log(error);
 			});
 	};
 
@@ -35,6 +37,11 @@ function Login() {
 		<div className="form-div">
 			<div className="form">
 				<h1>LOGIN</h1>
+				{iserror ? (
+					<p className="error" style={{ display: "block" }}>
+						Wrong Email or Password
+					</p>
+				) : null}
 				<input
 					id="username"
 					placeholder="Username:"

@@ -12,7 +12,6 @@ function Pages() {
 			<Routes location={location} key={location.pathname}>
 				<Route path="/" element={<Login />} />
 				<Route path="/gallery" element={<Gallery />} />
-				<Route path="/error" element={<Error />} />
 			</Routes>
 		</div>
 	);
