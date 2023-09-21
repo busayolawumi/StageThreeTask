@@ -12,47 +12,47 @@ export const images= [
     {
         imgLink: tech,
         id: "1",
-        tag: ""
+        tag: "Code"
  
     },
     {
         imgLink: tech2,
         id: "2",
-        tag: "" 
+        tag: "Computer" 
     },
     {
         imgLink: tech3,
         id: "3",
-        tag: "" 
+        tag: "Computer" 
     },
     {
         imgLink: tech4,
         id: "4",
-        tag: "" 
+        tag: "World" 
     },
     {
         imgLink: tech5,
         id: "5",
-        tag: "" 
+        tag: "Toy" 
     },
     {
         imgLink: tech6,
         id: "6",
-        tag: "" 
+        tag: "Computer" 
     },
     {
         imgLink: tech7,
         id: "7",
-        tag: "" 
+        tag: "World" 
     },
     {
         imgLink: tech8,
         id: "8",
-        tag: "" 
+        tag: "Toy" 
     },
     {
         imgLink: tech9,
         id: "9",
-        tag: "" 
+        tag: "Code" 
     },
 ];

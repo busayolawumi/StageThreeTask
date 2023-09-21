@@ -14,8 +14,9 @@ const Sortable = ({ item }) => {
 	return (
 		<div>
 			<div ref={setNodeRef} style={style} {...attributes} {...listeners}>
-				<div key={item.id}>
+				<div className="card" key={item.id}>
 					<img className="image" src={item.imgLink} alt="pic" />
+					<p>{item.tag}</p>
 				</div>
 			</div>
 		</div>

@@ -17,7 +17,6 @@ function Gallery() {
 				);
 				const overId = items.findIndex((item) => item.id === over.id);
 				const movedItems = arrayMove(items, activeId, overId);
-				s;
 				return movedItems;
 			});
 		}
