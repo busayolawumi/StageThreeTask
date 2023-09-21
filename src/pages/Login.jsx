@@ -25,21 +25,29 @@ function Login() {
 			});
 	};
 
+	const handleKeyPress = (event) => {
+		if (event.key === "Enter") {
+			signIn();
+		}
+	};
+
 	return (
 		<div className="form-div">
 			<div className="form">
-				<label htmlFor="username">Enter your username:</label>
+				<h1>LOGIN</h1>
 				<input
 					id="username"
+					placeholder="Username:"
 					type="text"
 					onChange={(e) => setEmail(e.target.value)}
 				/>
 
-				<label htmlFor="password">Enter your password:</label>
 				<input
 					id="password"
+					placeholder="Password:"
 					type="password"
 					onChange={(e) => setPassword(e.target.value)}
+					onKeyDown={handleKeyPress}
 				/>
 				<button onClick={signIn}>Submit</button>
 			</div>

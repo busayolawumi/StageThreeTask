@@ -8,12 +8,32 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: lightgrey;
 }
 
 .form{
   display: flex;
   flex-direction: column;
-  width: 40%;
+  justify-content: space-between;
+  width: 350px;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #f0f0f0;
+}
+
+.form input{
+  height: 50px;
+  margin-top: 50px;
+  padding-left: 20px;
+}
+
+.form button{
+  margin: auto;
+  margin-top: 50px;
+  width: 30%;
+  padding: 10px 20px;
+  background-color: lightgrey;
 }
 
 h1{
@@ -29,14 +49,15 @@ h1{
 }
 
 .images-grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 200px;
   width: 940px;
 }
 
 .image{
   width: 300px;
   height: 200px;
-  cursor: pointer;
+}
+
+.image-div{
+  padding-bottom: 20px;
 }
