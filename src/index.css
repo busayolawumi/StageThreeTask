@@ -49,15 +49,31 @@ h1{
 }
 
 .images-grid{
-  gap: 200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-flow: dense;
+  gap: 20px;
   width: 940px;
+  margin: auto;
 }
 
 .image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 300px;
   height: 200px;
+  user-select: none;
 }
 
-.image-div{
-  padding-bottom: 20px;
+@media screen and (max-width: 950px) {
+  .images-grid{
+    width: 620px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .images-grid{
+    width: 300px;
+  }
 }

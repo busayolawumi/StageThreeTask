@@ -11,38 +11,48 @@ import tech9 from "../assets/tech9.jpg"
 export const images= [
     {
         imgLink: tech,
-        id: "1" 
+        id: "1",
+        tag: ""
+ 
     },
     {
         imgLink: tech2,
-        id: "2" 
+        id: "2",
+        tag: "" 
     },
     {
         imgLink: tech3,
-        id: "3" 
+        id: "3",
+        tag: "" 
     },
     {
         imgLink: tech4,
-        id: "4" 
+        id: "4",
+        tag: "" 
     },
     {
         imgLink: tech5,
-        id: "5" 
+        id: "5",
+        tag: "" 
     },
     {
         imgLink: tech6,
-        id: "6" 
+        id: "6",
+        tag: "" 
     },
     {
         imgLink: tech7,
-        id: "7" 
+        id: "7",
+        tag: "" 
     },
     {
         imgLink: tech8,
-        id: "8" 
+        id: "8",
+        tag: "" 
     },
     {
         imgLink: tech9,
-        id: "9" 
+        id: "9",
+        tag: "" 
     },
 ];
