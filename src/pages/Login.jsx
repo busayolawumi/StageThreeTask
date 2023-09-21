@@ -21,9 +21,6 @@ function Login() {
 			})
 			.catch((error) => {
 				setIserror(true);
-				// const errorCode = error.code;
-				// const errorMessage = error.message;
-				console.log(error);
 			});
 	};
 

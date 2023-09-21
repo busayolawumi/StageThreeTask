@@ -2,7 +2,6 @@ import React from "react";
 import Login from "./Login";
 import Gallery from "./Gallery";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Error from "./Error";
 
 function Pages() {
 	const location = useLocation();
