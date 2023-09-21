@@ -22,13 +22,13 @@ export const images= [
     },
     {
         imgLink: tech3,
-        id: "3",
-        tag: "Computer" 
+        id: "4",
+        tag: "Earth" 
     },
     {
         imgLink: tech4,
-        id: "4",
-        tag: "World" 
+        id: "3",
+        tag: "Computer" 
     },
     {
         imgLink: tech5,
@@ -43,7 +43,7 @@ export const images= [
     {
         imgLink: tech7,
         id: "7",
-        tag: "World" 
+        tag: "Earth" 
     },
     {
         imgLink: tech8,
