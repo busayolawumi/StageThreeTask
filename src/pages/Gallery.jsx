@@ -9,16 +9,16 @@ function Gallery() {
 
 	function handleDragEnd(event) {
 		const { active, over } = event;
-		console.log("ACTIVE: " + active.id);
-		console.log("OVER: " + over.id);
 
 		if (active.id !== over.id) {
 			setItems((items) => {
-				const activeId = items.indexOf(active.id);
-				const overId = items.indexOf(over.id);
-
-				console.log(arrayMove(items, activeId, overId));
-				return arrayMove(items, activeId, overId);
+				const activeId = items.findIndex(
+					(item) => item.id === active.id
+				);
+				const overId = items.findIndex((item) => item.id === over.id);
+				const movedItems = arrayMove(items, activeId, overId);
+				s;
+				return movedItems;
 			});
 		}
 	}
