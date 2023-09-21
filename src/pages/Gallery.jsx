@@ -3,9 +3,15 @@ import { images } from "../scripts/images";
 import { DndContext, closestCenter } from "@dnd-kit/core";
 import { arrayMove, SortableContext } from "@dnd-kit/sortable";
 import ArrangeItem from "../components/ArrangeItem";
+import { FaSearch } from "react-icons/fa";
 
 function Gallery() {
+	const [input, setInput] = useState("");
 	const [items, setItems] = useState([...images]);
+
+	const newItems = items.filter((item) =>
+		item.tag.toLowerCase().includes(input.toLowerCase())
+	);
 
 	function handleDragEnd(event) {
 		const { active, over } = event;
@@ -29,9 +35,21 @@ function Gallery() {
 		>
 			<SortableContext items={items}>
 				<h1>Gallery</h1>
+				{/* Search Functionality */}
+				<div className="search-div">
+					<FaSearch className="search-button" />
+					<input
+						placeholder="Search..."
+						className="search-input"
+						onChange={(e) => setInput(e.target.value)}
+						type="text"
+						value={input}
+					/>
+				</div>
+
 				<div className="images">
 					<div className="images-grid">
-						{items.map((item, index) => (
+						{newItems.map((item, index) => (
 							<ArrangeItem
 								item={item}
 								index={index}
