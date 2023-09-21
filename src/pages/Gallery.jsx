@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { images } from "../scripts/images";
 import { DndContext, closestCenter } from "@dnd-kit/core";
 import { arrayMove, SortableContext } from "@dnd-kit/sortable";
-import Sortable from "../components/Sortable";
+import ArrangeItem from "../components/ArrangeItem";
 
 function Gallery() {
 	const [items, setItems] = useState([...images]);
@@ -32,7 +32,7 @@ function Gallery() {
 				<div className="images">
 					<div className="images-grid">
 						{items.map((item, index) => (
-							<Sortable
+							<ArrangeItem
 								item={item}
 								index={index}
 								key={item.id}

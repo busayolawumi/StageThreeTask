@@ -2,7 +2,7 @@ import React from "react";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 
-const Sortable = ({ item }) => {
+const ArrangeItem = ({ item }) => {
 	const { attributes, listeners, setNodeRef, transform, transition } =
 		useSortable({ id: item.id });
 
@@ -23,4 +23,4 @@ const Sortable = ({ item }) => {
 	);
 };
 
-export default Sortable;
+export default ArrangeItem;
